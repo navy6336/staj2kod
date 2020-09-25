@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+body{
+    margin:0px;
+    padding: 5px;
+}
+.hasta{
+    
+    width:auto;
+}
+table{
+    width: 100%;
+    font-family: sans-serif;
+    background: blanchedalmond;
+    border-spacing: 5px;
+}
+table, th, td {
+    border-radius: 5px;
+    border: 1px solid black;
+    border-collapse: collapse;
+  }
+  th, td {
+    width: 20%;
+    padding: 5px;
+    text-align: center;
+  }
+  tbody{
+      font-style: normal;
+      font-weight: 0;
+  }
+
+
+  .btn {
+    padding: 1em 2.1em 1.1em;
+    border-radius: 3px;
+    margin: 8px 8px 8px 8px;
+    color: #fbdedb;
+    background-color: #fbdedb;
+    display: inline-block;
+    background: #e74c3c;
+    -webkit-transition: 0.3s;
+    -moz-transition: 0.3s;
+    -o-transition: 0.3s;
+    transition: 0.3s;
+    font-family: sans-serif;
+    font-weight: 800;
+    font-size: .85em;
+    text-transform: uppercase;
+    text-align: center;
+    text-decoration: none;
+    -webkit-box-shadow: 0em -0.3rem 0em rgba(0, 0, 0, 0.1) inset;
+    -moz-box-shadow: 0em -0.3rem 0em rgba(0, 0, 0, 0.1) inset;
+    box-shadow: 0em -0.3rem 0em rgba(0, 0, 0, 0.1) inset;
+    position: relative;
+    margin-top: 10px 0px 0px 0px;
+}
+.btn:hover, .btn:focus {
+    opacity: 0.8;
+}
+.btn:active {
+    -webkit-transform: scale(0.80);
+    -moz-transform: scale(0.80);
+    -ms-transform: scale(0.80);
+    -o-transform: scale(0.80);
+    transform: scale(0.80);
+}
+.btn.block {
+    display: block !important;
+}
+.green {
+    background-color: #5bbd72;
+}
+
+</style>
+<body>
+    <div class="hasta">
+        <table class="hasta-tablo">
+            <tr>
+                <th>Kimlik No.</th>
+                <th>Ad</th>
+                <th>Soyad</th>
+                <th>Tanı</th>
+                
+            </tr>
+            <tbody>
+
+                <% for(var i=0;i<data1.length;i++){ %>
+                <tr>
+                    <td><b><%=data1[i]["tc"]%></b></td>
+                    <td><b><%=data1[i]["ad"]%></b></td>
+                    <td><b><%=data1[i]["soyad"]%></b></td>
+                    <td><b><%=data1[i]["tanı"]%></b></td>
+                </tr>
+                <% }%>
+    
+    
+    
+            </tbody>
+            
+        </table>
+        <a href="/kayit" class="btn green block">YENİ KAYIT</a>
+        <a  href = "/second";style="margin-bottom:12px" class="button1 button-lg button-info button-block ">
+            <b>Anasayfa</b></a>
+    </div>
+</body>
+</html>
